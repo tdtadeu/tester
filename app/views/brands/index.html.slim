@@ -1,0 +1,15 @@
+- if @brands.any?
+  table
+    thead
+      tr
+        th Id
+        th Name
+        th Options
+    tbody
+      - @brands.each do |brand|
+        tr
+          td= brand.id
+          td= brand.name
+          td= link_to "Delete", brand_path(brand), method: :delete
+- else
+  p No brands yet
