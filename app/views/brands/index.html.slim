@@ -2,14 +2,18 @@
   table
     thead
       tr
+        th Image
         th Id
         th Name
+        th SMS
         th Options
     tbody
       - @brands.each do |brand|
         tr
+          td= img_tag brand.logo.thumb("100x100#").url if brand.logo.present?
           td= brand.id
           td= brand.name
+          td= brand.sms
           td= link_to "Delete", brand_path(brand), method: :delete
 - else
   p No brands yet

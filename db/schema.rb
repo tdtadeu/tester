@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202130823) do
+ActiveRecord::Schema.define(version: 20151202152031) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name",       default: "banana", null: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "sms",        default: "SMS",    null: false
+    t.string   "logo_uid"
+    t.string   "logo_name"
   end
 
   add_index "brands", ["name"], name: "index_brands_on_name", unique: true
