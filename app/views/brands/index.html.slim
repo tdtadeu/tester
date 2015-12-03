@@ -1,5 +1,5 @@
 - if @brands.any?
-  table
+  table.table
     thead
       tr
         th Image
@@ -10,10 +10,13 @@
     tbody
       - @brands.each do |brand|
         tr
-          td= img_tag brand.logo.thumb("100x100#").url if brand.logo.present?
+          td= image_tag brand.logo.thumb("30x30#").url if brand.logo.present?
           td= brand.id
           td= brand.name
           td= brand.sms
-          td= link_to "Delete", brand_path(brand), method: :delete
+          td
+            = link_to "Edit", edit_brand_path(brand)
+            '  |
+            = link_to "Delete", brand_path(brand), method: :delete
 - else
   p No brands yet
