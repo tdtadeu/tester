@@ -1,0 +1,27 @@
+h1 Partners#index
+p Find me in app/views/partners/index.html.slim
+
+- if @partners.any?
+  table.table
+    thead
+      tr
+        th Logo
+        th Id
+        th Url
+        th Type
+        th Stock Type
+        th Options
+    tbody
+      - @partners.each do |partner|
+        tr
+          td= image_tag partner.logo.thumb("30x30#").url if partner.logo.present?
+          td= partner.id
+          td= partner.url
+          td= partner.partner_type
+          td= partner.stock_type
+          td
+            = link_to "Edit", edit_brand_partner_path(@brand, partner)
+            '  |
+            = link_to "Delete", brand_partner_path(@brand, partner), method: :delete
+- else
+  p No partners yet

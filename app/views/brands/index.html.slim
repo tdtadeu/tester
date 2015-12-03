@@ -15,6 +15,10 @@
           td= brand.name
           td= brand.sms
           td
+            = link_to "List Partners", brand_partners_path(brand)
+            '  |
+            = link_to "Add Partner", new_brand_partner_path(brand)
+            '  |
             = link_to "Edit", edit_brand_path(brand)
             '  |
             = link_to "Delete", brand_path(brand), method: :delete

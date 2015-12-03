@@ -1,0 +1,5 @@
+h1 Partners#edit
+p Find me in app/views/partners/edit.html.slim
+
+= simple_form_for @partner, url: brand_partner_path(@brand, @partner) do |f|
+  = render partial: "form", locals: { form: f }

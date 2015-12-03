@@ -1,0 +1,5 @@
+= form.input :logo, as: :file
+= form.input :url
+= form.input :partner_type, collection: %w(printed web online)
+= form.input :stock_type, collection: %w(no_stock batch online)
+= form.submit "Enviar"

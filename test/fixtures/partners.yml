@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  logo_uid: MyString
+  logo_name: MyString
+  url: MyString
+  partner_type: MyString
+  stock_type: MyString
+  brand_id: 
+
+two:
+  logo_uid: MyString
+  logo_name: MyString
+  url: MyString
+  partner_type: MyString
+  stock_type: MyString
+  brand_id: 
