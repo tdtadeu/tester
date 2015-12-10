@@ -17,6 +17,8 @@ gem "bootstrap-sass", "~> 3.3.6"
 
 group :development, :test do
   gem "byebug"
+  gem "pry"
+  gem "pry-byebug"
 end
 
 group :development do

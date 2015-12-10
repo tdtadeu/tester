@@ -20,8 +20,8 @@ p Find me in app/views/partners/index.html.slim
           td= partner.partner_type
           td= partner.stock_type
           td
-            = link_to "Edit", edit_brand_partner_path(@brand, partner)
+            = link_to "Edit", edit_partner_path(partner)
             '  |
-            = link_to "Delete", brand_partner_path(@brand, partner), method: :delete
+            = link_to "Delete", partner_path(partner), method: :delete
 - else
   p No partners yet
